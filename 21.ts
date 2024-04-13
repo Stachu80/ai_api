@@ -1,5 +1,6 @@
-import {get_token_and_task_data, send_answer} from "../modules/tasks";
+import {get_token_and_task_data, send_answer} from "./modules/tasks";
 import OpenAI from "openai";
+// @ts-ignore
 import express from "express";
 
 const app = express();
@@ -26,6 +27,7 @@ app.post("/", async (req, res) => {
 
     const response = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
+        // @ts-ignore
         messages: messages
     });
 
