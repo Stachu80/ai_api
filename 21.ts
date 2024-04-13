@@ -4,7 +4,7 @@ import OpenAI from "openai";
 import express from "express";
 
 const app = express();
-const port = 3034;
+const port = 80;
 const openai = new OpenAI();
 
 const messages = [
