@@ -1,13 +1,13 @@
 const express = require('express')
 
-const express = express();
+const app = express();
 const port = 80;
 
-express.listen(port, () => {
+app.listen(port, () => {
     console.log(`API Mock running at http://localhost:${port}`);
 });
 
-express.get('/', (req, res) => {
+app.get('/', (req, res) => {
         res.send("Hello World!")
     }
 )
